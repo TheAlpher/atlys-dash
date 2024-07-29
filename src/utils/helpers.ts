@@ -1,9 +1,3 @@
-export const getSvg = (svgStr : string): string => {
-    return `data:image/svg+xml;base4,${btoa(unescape(encodeURIComponent((svgStr))))}`
-    
-}
-
-
   export const dateDiffString = (dateNum : number): string => {
     const diffMinutes = (Date.now() - dateNum) / 60000;
 
