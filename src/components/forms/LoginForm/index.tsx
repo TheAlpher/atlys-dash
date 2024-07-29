@@ -27,7 +27,7 @@ const LoginForm = ({ onSubmit }: LoginFormProps) => {
               onClick={() => {
                 alert("New password link has been sent");
               }}
-              className="text-[12px] text-[#C5C7CA]"
+              className="text-[12px] text-[#C5C7CA] cursor-pointer"
             >
               Forgot password?
             </span>
@@ -52,7 +52,7 @@ const LoginForm = ({ onSubmit }: LoginFormProps) => {
 
         <button
           type="submit"
-          className="w-[100%] text-center  text-[16px] font-semibold rounded-[4px] py-3 bg-[#4A96FF] text-white my-4"
+          className="w-[100%] text-center  text-[16px] font-semibold rounded-[4px] py-3 action-btn  my-4"
         >
           {" "}
           Login now

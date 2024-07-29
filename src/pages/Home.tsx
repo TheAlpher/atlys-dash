@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <Fragment>
       {" "}
-      <div className="home-wrapper w-[100vw] h-[100vh]">
+      <div className="home-wrapper w-[100%] h-[100vh]">
         <SignInModal
           open={isSigninOpen}
           closeModal={() => {
@@ -45,13 +45,17 @@ const Home = () => {
             toggleSignin();
           }}
         />
-        <div className=" home-container  w-[max(48.6%,700px)] mx-auto">
-          <h2>Hello Jane</h2>
-          <span>
-            {" "}
-            How are you doing today? Would you like to share something with the
-            community 🤗
-          </span>
+        <div className=" home-container  w-[max(48.6%,700px)] m-[70px] mx-auto ">
+          <div className="mb-10">
+            <p className="text-[#C5C7CA] font-semibold text-[28px]">
+              Hello Jane
+            </p>
+            <p className="w-[75%] text-[#7F8084]">
+              {" "}
+              How are you doing today? Would you like to share something with
+              the community 🤗
+            </p>
+          </div>
 
           <CreatePost
             onPostClick={() => {

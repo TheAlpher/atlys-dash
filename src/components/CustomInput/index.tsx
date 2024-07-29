@@ -4,7 +4,6 @@ import SVG from "react-inlinesvg";
 import "./CustomInput.css";
 interface CustomInputProps {
   placeholder?: string;
-  //value?: string | number | readonly string[] | undefined;
   label?: string;
   secondaryAction?: ReactNode;
   inputClass?: string;

@@ -17,3 +17,7 @@ input {
 input:focus-visible{
     outline : none !important
 }
+.action-btn {
+    color : #FFFFFF;
+    background: #4A96FF;
+}
