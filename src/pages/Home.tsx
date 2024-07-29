@@ -12,7 +12,7 @@ const postDataArray: Record<string, any>[] = [
 
     emote: "hand",
     commentCount: 24,
-    createdAt: 1722229771028,
+    createdAt: 1722209771028,
     updatedAt: 1722229771028,
     content: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.`,
   },
@@ -23,8 +23,8 @@ const postDataArray: Record<string, any>[] = [
     isEdited: false,
     emote: "sad",
     commentCount: 1,
-    createdAt: 1722224771028,
-    updatedAt: 1722229771028,
+    createdAt: 1722209771028,
+    updatedAt: 1722209771028,
     content: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.`,
   },
 ];

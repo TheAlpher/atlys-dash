@@ -20,11 +20,7 @@ const WallPost = ({ postData }: WallPostProps) => {
             <p className="text-[#C5C7CA] font-semibold">{postData.username}</p>
             <div className="text-[#7F8084] text-[14px]">
               <span>{dateDiffString(postData.updatedAt)} ago</span>
-              {postData.isEdited ? (
-                <span className="ms-3">• Edited</span>
-              ) : (
-                <></>
-              )}
+              {postData.isEdited ? <span> • Edited</span> : <></>}
             </div>
           </div>
         </div>
