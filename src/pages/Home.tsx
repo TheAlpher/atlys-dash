@@ -38,14 +38,8 @@ const Home = () => {
     <Fragment>
       {" "}
       <div className="home-wrapper w-[100%] h-[100vh]">
-        <SignInModal
-          open={isSigninOpen}
-          closeModal={() => {
-            console.log("close called");
-            toggleSignin();
-          }}
-        />
-        <div className=" home-container  w-[max(48.6%,700px)] m-[70px] mx-auto ">
+        <SignInModal open={isSigninOpen} closeModal={toggleSignin} />
+        <div className=" home-container  w-[max(48.6%,700px)] m-[70px] mx-auto pb-4 ">
           <div className="mb-10">
             <p className="text-[#C5C7CA] font-semibold text-[28px]">
               Hello Jane
@@ -57,11 +51,7 @@ const Home = () => {
             </p>
           </div>
 
-          <CreatePost
-            onPostClick={() => {
-              toggleSignin();
-            }}
-          />
+          <CreatePost onPostClick={toggleSignin} />
           {postDataArray.map((obj) => (
             <WallPost key={obj.id} postData={obj} />
           ))}

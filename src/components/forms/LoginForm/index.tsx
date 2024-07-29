@@ -15,6 +15,7 @@ const LoginForm = ({ onSubmit }: LoginFormProps) => {
           label=" Email or Username"
           placeholder="Enter your email or username"
           type="text"
+          autofocus={true}
           required={true}
         />
         <CustomInput
@@ -22,6 +23,7 @@ const LoginForm = ({ onSubmit }: LoginFormProps) => {
           placeholder="Enter your password"
           type="password"
           required={true}
+          autofocus={true}
           secondaryAction={
             <span
               onClick={() => {

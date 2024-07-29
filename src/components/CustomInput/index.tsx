@@ -12,6 +12,7 @@ interface CustomInputProps {
   type: string;
   required?: boolean;
   value?: any;
+  autofocus?: boolean;
 }
 
 const CustomInput = ({
@@ -24,6 +25,7 @@ const CustomInput = ({
   onChange,
   placeholder,
   required = false,
+  autofocus = false,
 }: CustomInputProps) => {
   const [inputType, setInputType] = useState<string>("text");
   useEffect(() => {
@@ -51,6 +53,7 @@ const CustomInput = ({
         {type == "password" ? (
           <Fragment>
             <input
+              autoFocus={autofocus}
               aria-labelledby={label}
               required={required}
               className={inputClass + " flex-1 bg-transparent"}
@@ -70,6 +73,7 @@ const CustomInput = ({
           </Fragment>
         ) : (
           <input
+            autoFocus={autofocus}
             aria-labelledby={label}
             required={required}
             className={inputClass + " flex-1 bg-transparent"}
