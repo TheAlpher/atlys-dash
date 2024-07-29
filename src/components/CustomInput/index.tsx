@@ -63,6 +63,7 @@ const CustomInput = ({
               placeholder={placeholder}
               value={value}
               type={inputType}
+              autoComplete="off"
               onChange={onChange}
             />
             <button
@@ -77,6 +78,7 @@ const CustomInput = ({
         ) : (
           <input
             name={name}
+            autoComplete="off"
             autoFocus={autofocus}
             aria-labelledby={label}
             required={required}

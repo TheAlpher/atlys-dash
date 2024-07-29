@@ -9,6 +9,8 @@ const CreatePost = ({ onPostClick }: CreatePostProps) => {
       <div className="textarea-container flex mt-4 p-4 bg-[#191920] rounded-[8px]">
         <EmoteContainer svgData={"chat"} />
         <input
+          autoComplete="off"
+          autoFocus
           placeholder="How are you feeling today?"
           className="flex-1 bg-transparent ms-4 "
         />
