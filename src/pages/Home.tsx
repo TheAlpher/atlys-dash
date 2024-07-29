@@ -30,7 +30,6 @@ const postDataArray: Record<string, any>[] = [
 ];
 const Home = () => {
   const [isSigninOpen, setSigninOpen] = useState<boolean>(false);
-
   const toggleSignin = () => {
     setSigninOpen((val) => !val);
   };
@@ -41,8 +40,8 @@ const Home = () => {
         <SignInModal open={isSigninOpen} closeModal={toggleSignin} />
         <div className=" home-container  w-[max(48.6%,700px)] m-[70px] mx-auto pb-4 ">
           <div className="mb-10">
-            <p className="text-[#C5C7CA] font-semibold text-[28px]">
-              Hello Jane
+            <p className="home-header-name text-[#C5C7CA] font-semibold text-[28px]">
+              Hello {localStorage.getItem("username") || "Jane"}
             </p>
             <p className="w-[75%] text-[#7F8084]">
               {" "}

@@ -8,23 +8,34 @@ const SignupForm = ({ onSubmit }: SignupFormProps) => {
       <form
         onSubmit={(e: any) => {
           e.preventDefault();
-          onSubmit(e);
+          const formData = new FormData(e.target);
+          const myData: Record<string, any> = {};
+          for (const [key, value] of formData.entries()) {
+            myData[key] = value;
+            if (key == "username") {
+              localStorage.setItem("username", myData["username"]);
+            }
+          }
+          onSubmit(myData);
         }}
       >
         <CustomInput
           label="Email"
           type="email"
+          name="email"
           placeholder="Enter your email"
           required={true}
         />{" "}
         <CustomInput
           label="Username"
           type="text"
+          name="username"
           placeholder="Choose a preferred username"
           required={true}
         />{" "}
         <CustomInput
           label="Password"
+          name="password"
           type="password"
           placeholder="Choose a strong password"
           required={true}

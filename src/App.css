@@ -21,3 +21,7 @@ input:focus-visible{
     color : #FFFFFF;
     background: #4A96FF;
 }
+
+.home-header-name {
+    word-wrap:break-word ;
+}

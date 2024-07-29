@@ -8,20 +8,32 @@ const LoginForm = ({ onSubmit }: LoginFormProps) => {
       <form
         onSubmit={(e: any) => {
           e.preventDefault();
-          onSubmit(e);
+          const formData = new FormData(e.target);
+          const myData: Record<string, any> = {};
+          for (const [key, value] of formData.entries()) {
+            myData[key] = value;
+            if (key == "username") {
+              localStorage.setItem("username", myData["username"]);
+            }
+          }
+          onSubmit(myData);
         }}
       >
         <CustomInput
-          label=" Email or Username"
+          label="Email or Username"
           placeholder="Enter your email or username"
           type="text"
+          key={"username"}
+          name="username"
           autofocus={true}
           required={true}
         />
         <CustomInput
+          key={"password"}
           label="Password"
           placeholder="Enter your password"
           type="password"
+          name="password"
           required={true}
           autofocus={true}
           secondaryAction={
